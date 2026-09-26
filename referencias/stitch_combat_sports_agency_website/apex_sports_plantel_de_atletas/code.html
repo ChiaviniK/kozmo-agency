@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#282a2f", "on-tertiary": "#2e3036", "on-tertiary-fixed": "#1a1b21", "surface-container": "#1f1f24", "primary-fixed-dim": "#ffb3b3", "primary": "#ffb3b3", "on-surface-variant": "#e6bcbc", "on-primary-fixed-variant": "#920022", "on-background": "#e3e2e8", "secondary": "#ffb955", "on-tertiary-fixed-variant": "#45474c", "outline-variant": "#5d3f3f", "surface": "#121317", "tertiary-fixed-dim": "#c6c6cd", "error-container": "#93000a", "on-primary": "#680015", "tertiary-fixed": "#e2e2e9", "surface-bright": "#38393e", "on-secondary-container": "#4f3100", "error": "#ffb4ab", "on-primary-container": "#5b0011", "outline": "#ad8887", "primary-container": "#ff5261", "background": "#121317", "surface-container-highest": "#343439", "inverse-surface": "#e3e2e8", "primary-fixed": "#ffdad9", "secondary-fixed-dim": "#ffb955", "on-secondary-fixed": "#291800", "surface-container-low": "#1a1b20", "surface-tint": "#ffb3b3", "on-primary-fixed": "#400009", "inverse-primary": "#bf002f", "on-secondary": "#452b00", "tertiary-container": "#8f9097", "secondary-fixed": "#ffddb4", "inverse-on-surface": "#2f3035", "surface-variant": "#343439", "secondary-container": "#dc9100", "surface-container-high": "#292a2e", "on-secondary-fixed-variant": "#633f00", "on-surface": "#e3e2e8", "surface-dim": "#121317", "on-error-container": "#ffdad6", "surface-container-lowest": "#0d0e12", "tertiary": "#c6c6cd", "on-error": "#690005" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1.5rem", "margin": "3rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem" }, "fontFamily": { "title-lg": ["Manrope"], "headline-sm": ["Anton"], "headline-lg": ["Anton"], "display-lg-mobile": ["Anton"], "label-md": ["Manrope"], "display-lg": ["Anton"], "title-md": ["Manrope"], "body-md": ["Manrope"], "headline-md": ["Anton"], "headline-xl-mobile": ["Anton"], "body-lg": ["Manrope"], "label-lg": ["Manrope"], "label-sm": ["Manrope"], "body-sm": ["Manrope"], "headline-xl": ["Anton"] }, "fontSize": { "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display-lg-mobile": ["44px", { "lineHeight": "48px", "letterSpacing": "0.03em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "700" }], "display-lg": ["72px", { "lineHeight": "76px", "letterSpacing": "0.04em", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.005em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "400" }], "headline-xl-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-xl": ["48px", { "lineHeight": "52px", "letterSpacing": "0.03em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Apex Combat & Sports Management Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VDUO2_ckX3e-t9zLEQS5_JNCJtQpMNJCfDeoROMM5GwEI7zttZjSoAN5ItJpsR4mhrCV4bdHhGN9199iKcLZ1oeNCQh-KiyP4B6fhee67n4_zwX9niPHSrOqNAtWl4EWg6KaKpIA51w3tQ1hivmoz1qAeXYNtfNaqAI5D1CwzZH-yC6o_G-jY-Rkbcmabt7UWds1I-R9dN7aVuF3jfwVQzwlfk2B3_Dj-n4i870YkQ9ayzvcY9SmpPbmA"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface truncate">APEX</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase truncate">Atletas</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notificações Urgentes" class="relative w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#ff5261]"></span></button><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsavgxZPf6V02uvU7PH9m_zI2g6TmXhnbCn84Qz6UBGThtZtAYotjLovG1D2I100F19rq34bXmXq5A5WK82HPeb9oyxclITyZhsgNGfWZiFHOn9U7BDnBRXwtDmkHuPi6z1aLGTHrMhrH89M0ylFd7aqSbBLaTHHXw-MSkUxhKqBFyAuDWwoQhHpiS0-Z2UgFlznIVTQPPc2fNqX5Lf2iIVP-XRaFlml3Of_CQq39Fo5L3x9rH_C4_"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Search & Head Title Section -->
+<section class="px-gutter-mobile pt-space-md pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-baseline justify-between">
+<h1 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wide">Plantel de Atletas</h1>
+<span class="font-label-md text-label-md text-primary bg-primary-container/20 px-space-xs py-0.5 rounded-DEFAULT">48 ATIVOS</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Nossos lutadores e atletas de alta performance gerenciados pela Apex.</p>
+<!-- Quick Metric Pill Row -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-xs">
+<div class="bg-surface-container-low p-space-xs rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Cinturões</span>
+<span class="font-headline-md text-headline-md text-secondary leading-none mt-1">05</span>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Taxa Vitórias</span>
+<span class="font-headline-md text-headline-md text-primary leading-none mt-1">89%</span>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Próx. Lutas</span>
+<span class="font-headline-md text-headline-md text-on-surface leading-none mt-1">11</span>
+</div>
+</div>
+<!-- Search Input -->
+<div class="relative mt-space-sm">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant text-body-md font-body-md pl-10 pr-10 py-3 rounded-lg focus:outline-none focus:bg-surface-container-high transition-colors" id="athleteSearch" placeholder="Buscar atleta, categoria ou liga..." type="text"/>
+<button aria-label="Filtro Avançado" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</section>
+<!-- Modality Filter Chips (Horizontal Scroll) -->
+<section class="mt-space-xs">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar px-gutter-mobile py-space-xs">
+<button class="filter-chip active shrink-0 px-space-md py-1.5 rounded-DEFAULT font-label-md text-label-md uppercase bg-primary-container text-on-primary transition-all shadow-sm">Todos (48)</button>
+<button class="filter-chip shrink-0 px-space-md py-1.5 rounded-DEFAULT font-label-md text-label-md uppercase bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all">MMA (22)</button>
+<button class="filter-chip shrink-0 px-space-md py-1.5 rounded-DEFAULT font-label-md text-label-md uppercase bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all">Grappling (12)</button>
+<button class="filter-chip shrink-0 px-space-md py-1.5 rounded-DEFAULT font-label-md text-label-md uppercase bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all">Boxe (8)</button>
+<button class="filter-chip shrink-0 px-space-md py-1.5 rounded-DEFAULT font-label-md text-label-md uppercase bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all">Muay Thai (4)</button>
+<button class="filter-chip shrink-0 px-space-md py-1.5 rounded-DEFAULT font-label-md text-label-md uppercase bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all">Multiesporte (6)</button>
+</div>
+</section>
+<!-- Organization / League Pills -->
+<section class="px-gutter-mobile mt-space-xs">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant shrink-0 mr-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span> Ligas:
+      </span>
+<button class="org-chip shrink-0 px-2 py-0.5 rounded-DEFAULT text-label-sm font-label-sm uppercase bg-surface-container text-primary font-bold">UFC</button>
+<button class="org-chip shrink-0 px-2 py-0.5 rounded-DEFAULT text-label-sm font-label-sm uppercase bg-surface-container-lowest text-on-surface-variant hover:text-on-surface">ONE Champ</button>
+<button class="org-chip shrink-0 px-2 py-0.5 rounded-DEFAULT text-label-sm font-label-sm uppercase bg-surface-container-lowest text-on-surface-variant hover:text-on-surface">PFL</button>
+<button class="org-chip shrink-0 px-2 py-0.5 rounded-DEFAULT text-label-sm font-label-sm uppercase bg-surface-container-lowest text-on-surface-variant hover:text-on-surface">IBJJF / ADCC</button>
+<button class="org-chip shrink-0 px-2 py-0.5 rounded-DEFAULT text-label-sm font-label-sm uppercase bg-surface-container-lowest text-on-surface-variant hover:text-on-surface">Glory</button>
+<button class="org-chip shrink-0 px-2 py-0.5 rounded-DEFAULT text-label-sm font-label-sm uppercase bg-surface-container-lowest text-on-surface-variant hover:text-on-surface">CBF</button>
+</div>
+</section>
+<!-- Athletes List Grid -->
+<div class="px-gutter-mobile flex flex-col gap-space-md mt-space-sm pb-space-lg" id="athleteRosterList">
+<!-- Athlete 1: Gabriel Silva -->
+<article class="bg-surface-container rounded-lg overflow-hidden flex flex-col shadow-md relative">
+<div class="relative h-56 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover object-top" data-alt="Dynamic shot of a Brazilian middleweight MMA fighter with determined expression and combat tape on hands, dramatic arena backlighting in red and charcoal shadows with subtle championship smoke, gritty cinematic combat aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkMCXIjHMLJpW6YLrYS6ihVsk8PovEFn04idaAGfZ1HE_UKQJR1Sp-kGhXyduXQDlSR6M7SeeSB5zp0YSBJPyTU3mc6xFDOgswKKdeIRAcFMEiN8_ktEQEi2mHMVTuyA4EyLqvL0VtaU1QskJ-9lm390Ud-XlR_zlrOGBFpTn4fh8NB3xNG3bFuhEN8blGFLJehMpM2e-87piicbTuOyygHJ4xAnb6y3xS9WWCw2fIA6cUFgGr8s6I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/30 to-transparent"></div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5 items-center">
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase font-bold px-2 py-0.5 rounded-DEFAULT shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">trophy</span> Cinturão Atual
+          </span>
+<span class="bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface font-label-sm text-label-sm uppercase px-1.5 py-0.5 rounded-DEFAULT">UFC</span>
+</div>
+<div class="absolute top-3 right-3 w-6 h-4 bg-surface-container-lowest rounded-sm overflow-hidden flex items-center justify-center shadow">
+<span class="font-label-sm text-label-sm font-black text-on-surface">🇧🇷</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Peso Médio • 84 kg</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase leading-tight">Gabriel Silva <span class="text-on-surface-variant text-title-md font-title-md lowercase">"O Predador"</span></h2>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<!-- Telemetry Stats Strip -->
+<div class="grid grid-cols-3 bg-surface-container-low rounded-DEFAULT p-2 text-center">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">21-1-0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Cartel</span>
+</div>
+<div class="flex flex-col bg-surface-container-highest/20 rounded-sm">
+<span class="font-headline-sm text-headline-sm text-primary">16 KOs</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Nocautes</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-secondary">76%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Taxa Finaliz.</span>
+</div>
+</div>
+<!-- Schedule Pill -->
+<div class="flex items-center justify-between bg-surface-container-high px-3 py-2 rounded-DEFAULT">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">event</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Próximo Combate</span>
+<span class="font-title-md text-title-md text-on-surface leading-none">UFC 308 • Abu Dhabi</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary px-2 py-0.5 bg-primary-container/20 rounded-DEFAULT">26 OUT</span>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 bg-primary-container text-on-primary font-headline-sm text-headline-sm uppercase py-2.5 rounded-DEFAULT shadow-md hover:brightness-110 active:scale-95 transition-transform flex items-center justify-center gap-1.5">
+            Ver Perfil Completo <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button aria-label="Favoritar Atleta" class="w-11 h-11 bg-surface-container-high rounded-DEFAULT text-on-surface hover:text-primary transition-colors flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Athlete 2: Beatriz Mendes -->
+<article class="bg-surface-container rounded-lg overflow-hidden flex flex-col shadow-md relative">
+<div class="relative h-56 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover object-top" data-alt="Fierce female Brazilian Jiu-Jitsu black belt fighter looking intensely into camera, wearing sleek competition gi, athletic physique with sweat highlights, dark gym background with deep crimson accent lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ3Szsvs38xjfkstO3wquTXUunjZkofvFoLd6aZKO7NEhwGWVoMypfQwPIB4T2TKVWEq0-KHMlARrl1D7kKhmZXUnZiqwDpM_gKs18cDV72s-EHwOX0A34I1sxEj4BjrEIogPe9hGcyUqYa_UBvHoEaEdl4UwPjJXok1jUXwkhClMlysDM5e2p9tpcEAu9AOi7Np_YsdNdNrms5EogEXh4TuNJm9UiUeCIdNoZaz9WDlWL2Du346Ew"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/30 to-transparent"></div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5 items-center">
+<span class="bg-surface-container-lowest/80 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase font-bold px-2 py-0.5 rounded-DEFAULT shadow-sm">
+            Grappling Elite
+          </span>
+<span class="bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface font-label-sm text-label-sm uppercase px-1.5 py-0.5 rounded-DEFAULT">IBJJF / ADCC</span>
+</div>
+<div class="absolute top-3 right-3 w-6 h-4 bg-surface-container-lowest rounded-sm overflow-hidden flex items-center justify-center shadow">
+<span class="font-label-sm text-label-sm font-black text-on-surface">🇧🇷</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Faixa Preta • Peso Leve</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase leading-tight">Beatriz Mendes <span class="text-on-surface-variant text-title-md font-title-md lowercase">"Fúria"</span></h2>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="grid grid-cols-3 bg-surface-container-low rounded-DEFAULT p-2 text-center">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-secondary">3x Mundial</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Ouro IBJJF</span>
+</div>
+<div class="flex flex-col bg-surface-container-highest/20 rounded-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Prata ADCC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Mundial No-Gi</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">82%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Finalizações</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-high px-3 py-2 rounded-DEFAULT">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">event</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Próximo Desafio</span>
+<span class="font-title-md text-title-md text-on-surface leading-none">Superluta WNO • Austin, TX</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary px-2 py-0.5 bg-primary-container/20 rounded-DEFAULT">14 NOV</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-headline-sm text-headline-sm uppercase py-2.5 rounded-DEFAULT transition-colors flex items-center justify-center gap-1.5">
+            Ver Perfil Completo <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button aria-label="Favoritar Atleta" class="w-11 h-11 bg-surface-container-high rounded-DEFAULT text-on-surface hover:text-primary transition-colors flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Athlete 3: Lucas Alcantara -->
+<article class="bg-surface-container rounded-lg overflow-hidden flex flex-col shadow-md relative">
+<div class="relative h-56 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover object-top" data-alt="Muscular male professional boxer in fighting stance wrapped in dark red leather gloves, high contrast spotlighting highlighting sweat and chiseled cheekbones against an obsidian black boxing ring corner." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzoidJQ8a60lxzIUSzRRvrZtQ5NPjRFazQziIk5QIsc8QwIARWnV9rR6STUWsO4iwk9LYapBT4cnkK2JHsVQlY8QHetTgnotOf_u42JtokLeiT83J94Q-8o07Ytn1rfg45hQ4FudkWAMJaNLIBUoSiM46vwnrP3gcVUU1ol2bnZhaMFC2ldhRtDmPqbUB4WJ1mJ-qDHnXhf8Hu9dc50z_7BnYfKnj_p-A5mfmcq2xudRMKmtXD6cQF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/30 to-transparent"></div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5 items-center">
+<span class="bg-primary-container text-on-primary font-label-sm text-label-sm uppercase font-black px-2 py-0.5 rounded-DEFAULT shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">local_fire_department</span> Invicto
+          </span>
+<span class="bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface font-label-sm text-label-sm uppercase px-1.5 py-0.5 rounded-DEFAULT">Boxe Pro</span>
+</div>
+<div class="absolute top-3 right-3 w-6 h-4 bg-surface-container-lowest rounded-sm overflow-hidden flex items-center justify-center shadow">
+<span class="font-label-sm text-label-sm font-black text-on-surface">🇧🇷</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Meio-Pesado • 79.3 kg</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase leading-tight">Lucas Alcantara <span class="text-on-surface-variant text-title-md font-title-md lowercase">"Iron Fist"</span></h2>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="grid grid-cols-3 bg-surface-container-low rounded-DEFAULT p-2 text-center">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">14-0-0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Invicto</span>
+</div>
+<div class="flex flex-col bg-surface-container-highest/20 rounded-sm">
+<span class="font-headline-sm text-headline-sm text-primary">12 KOs</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Poder Fogo</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-secondary">85.7%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">KO Ratio</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-high px-3 py-2 rounded-DEFAULT">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">event</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Disputa Cinturão Latino</span>
+<span class="font-title-md text-title-md text-on-surface leading-none">Madison Square Garden • NY</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary px-2 py-0.5 bg-primary-container/20 rounded-DEFAULT">07 DEZ</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-headline-sm text-headline-sm uppercase py-2.5 rounded-DEFAULT transition-colors flex items-center justify-center gap-1.5">
+            Ver Perfil Completo <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button aria-label="Favoritar Atleta" class="w-11 h-11 bg-surface-container-high rounded-DEFAULT text-on-surface hover:text-primary transition-colors flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Athlete 4: Yuki Tanaka -->
+<article class="bg-surface-container rounded-lg overflow-hidden flex flex-col shadow-md relative">
+<div class="relative h-56 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover object-top" data-alt="Athletic Japanese-Brazilian Muay Thai striker with mongkhon headband and traditional hand wraps, determined focus, dramatic stadium rim lighting with sparks and smoke in a modern dark sports arena." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6jnnfvwHssEarAWPD8sO40WB8ljOqC_E0WKSGJEJotTCFuQeuqK18FVM-wrbm7a9b6h3QFILWr_kSH2BBPNU5esR3ZmRhrMFeU_2od5tqnoumUTpkinDPk5AMPFdBtNATaV5HEiuslNI8Y6YyPNG9SZy0WW1zeJ24Qe18Zv4Vyw0qLivD-Lkz5Fl8V-ZVXvDArbV4cUzeVygjvJgreaC7q3vg2I0hLPtADrZhIDTwtfiorSBVs7r_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/30 to-transparent"></div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5 items-center">
+<span class="bg-surface-container-lowest/80 backdrop-blur-sm text-secondary font-label-sm text-label-sm uppercase font-bold px-2 py-0.5 rounded-DEFAULT shadow-sm">
+            Top #2 Contender
+          </span>
+<span class="bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface font-label-sm text-label-sm uppercase px-1.5 py-0.5 rounded-DEFAULT">ONE Champ</span>
+</div>
+<div class="absolute top-3 right-3 w-6 h-4 bg-surface-container-lowest rounded-sm overflow-hidden flex items-center justify-center shadow">
+<span class="font-label-sm text-label-sm font-black text-on-surface">🇯🇵</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Muay Thai • Peso Pena (70kg)</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase leading-tight">Yuki Tanaka</h2>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="grid grid-cols-3 bg-surface-container-low rounded-DEFAULT p-2 text-center">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">32-3-0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Cartel Striking</span>
+</div>
+<div class="flex flex-col bg-surface-container-highest/20 rounded-sm">
+<span class="font-headline-sm text-headline-sm text-primary">18 KOs</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Nocautes</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-secondary">3x</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Bônus da Noite</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-high px-3 py-2 rounded-DEFAULT">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">event</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">ONE Fight Night 25</span>
+<span class="font-title-md text-title-md text-on-surface leading-none">Lumpinee Stadium • Bangkok</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary px-2 py-0.5 bg-primary-container/20 rounded-DEFAULT">09 NOV</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-headline-sm text-headline-sm uppercase py-2.5 rounded-DEFAULT transition-colors flex items-center justify-center gap-1.5">
+            Ver Perfil Completo <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button aria-label="Favoritar Atleta" class="w-11 h-11 bg-surface-container-high rounded-DEFAULT text-on-surface hover:text-primary transition-colors flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Athlete 5: Matheus Nogueira (Multiesporte) -->
+<article class="bg-surface-container rounded-lg overflow-hidden flex flex-col shadow-md relative">
+<div class="relative h-56 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover object-top" data-alt="Athletic young Brazilian professional soccer forward running in stadium turf wearing modern black training kit under intense stadium floodlights, confident posture, dark cinematic sports photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSZmS3wQtN1zAGKMgcUPQ7jC3TiQMihrHt6n2jwkICiMZVMJOtAYjit9N9m3x7W1HKUqPeDxuokomV2zycGr8rE4ntx6yrw0SrJBPdyoG-WrUCerfDayC9dSi6koDQ6Id9BB5nhTEeUgDfZYMrTEMPXP1PCCzCz48lsqz-dHtAg7D_A-iHmMX1Crjkhhue9ahJx5bU1XSuIg1JjkRXbplinH1WtZTpMxHNjiobzo4kGjFfMyN78Myj"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/30 to-transparent"></div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5 items-center">
+<span class="bg-surface-container-lowest/80 backdrop-blur-sm text-secondary font-label-sm text-label-sm uppercase font-bold px-2 py-0.5 rounded-DEFAULT shadow-sm">
+            Talento Multiesporte
+          </span>
+<span class="bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface font-label-sm text-label-sm uppercase px-1.5 py-0.5 rounded-DEFAULT">CBF / Série A</span>
+</div>
+<div class="absolute top-3 right-3 w-6 h-4 bg-surface-container-lowest rounded-sm overflow-hidden flex items-center justify-center shadow">
+<span class="font-label-sm text-label-sm font-black text-on-surface">🇧🇷</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Futebol • Ponta Direita • 20 Anos</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase leading-tight">Matheus Nogueira</h2>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="grid grid-cols-3 bg-surface-container-low rounded-DEFAULT p-2 text-center">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">14 Gols</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Temporada</span>
+</div>
+<div class="flex flex-col bg-surface-container-highest/20 rounded-sm">
+<span class="font-headline-sm text-headline-sm text-primary">09 Assist.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Passes Gol</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-secondary">34.8 km/h</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Vel. Pico</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-high px-3 py-2 rounded-DEFAULT">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">sports_soccer</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Próximo Jogo</span>
+<span class="font-title-md text-title-md text-on-surface leading-none">Brasileirão • Maracanã</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary px-2 py-0.5 bg-primary-container/20 rounded-DEFAULT">DOMINGO</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-headline-sm text-headline-sm uppercase py-2.5 rounded-DEFAULT transition-colors flex items-center justify-center gap-1.5">
+            Ver Perfil Completo <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button aria-label="Favoritar Atleta" class="w-11 h-11 bg-surface-container-high rounded-DEFAULT text-on-surface hover:text-primary transition-colors flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Athlete 6: Renata Carvalho -->
+<article class="bg-surface-container rounded-lg overflow-hidden flex flex-col shadow-md relative">
+<div class="relative h-56 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover object-top" data-alt="Intense female MMA fighter in aggressive stance inside the cage perimeter, black athletic fight gear, controlled rage expression, atmospheric arena fog with vivid red back-edge lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSrpJfsUaNV2Jq_UiaeX6hJQN0BoI7rIkdTZia1BRp3msQbCm8_t7RrMbAI9YJiMdQa5sXDciAQdZM7xSnsZtTChnGsJY6MOGzz0yE1hlymiqmY5MCP-wT9qU5y2BxrDF-u8NItN5nIqb-dcTygBj1j0zGpbLf-J57unjVPhsEz5hH2wwLIG6C1XVTHhXDo3MBctI0F6l0i3idksikAc_WBHDRb83MF2YtB5yQ2ZTiw1Qu8bg8QP7S"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/30 to-transparent"></div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5 items-center">
+<span class="bg-surface-container-lowest/80 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase font-bold px-2 py-0.5 rounded-DEFAULT shadow-sm">
+            PFL Contender
+          </span>
+<span class="bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface font-label-sm text-label-sm uppercase px-1.5 py-0.5 rounded-DEFAULT">PFL Playoffs</span>
+</div>
+<div class="absolute top-3 right-3 w-6 h-4 bg-surface-container-lowest rounded-sm overflow-hidden flex items-center justify-center shadow">
+<span class="font-label-sm text-label-sm font-black text-on-surface">🇧🇷</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">MMA Feminino • Peso Palha (52kg)</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase leading-tight">Renata Carvalho</h2>
+</div>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="grid grid-cols-3 bg-surface-container-low rounded-DEFAULT p-2 text-center">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">12-2-0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Cartel MMA</span>
+</div>
+<div class="flex flex-col bg-surface-container-highest/20 rounded-sm">
+<span class="font-headline-sm text-headline-sm text-primary">7 Subs</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Finalizações</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-secondary">5 Vit.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Seq. Atual</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-high px-3 py-2 rounded-DEFAULT">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">event</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">PFL Semifinais 2024</span>
+<span class="font-title-md text-title-md text-on-surface leading-none">Hard Rock Live • Hollywood, FL</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary px-2 py-0.5 bg-primary-container/20 rounded-DEFAULT">22 NOV</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-headline-sm text-headline-sm uppercase py-2.5 rounded-DEFAULT transition-colors flex items-center justify-center gap-1.5">
+            Ver Perfil Completo <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button aria-label="Favoritar Atleta" class="w-11 h-11 bg-surface-container-high rounded-DEFAULT text-on-surface hover:text-primary transition-colors flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Bottom CTA: Scout & Representation Banner -->
+<section class="mx-gutter-mobile mb-space-md p-space-md bg-surface-container-low rounded-lg flex items-center justify-between gap-space-sm shadow-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Assessoria & Scout</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">É um atleta de alto nível?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Candidate-se para o processo seletivo do roster Apex.</p>
+</div>
+<button class="shrink-0 bg-primary-container text-on-primary font-label-md text-label-md uppercase px-space-md py-space-sm rounded-DEFAULT shadow hover:brightness-110 transition-transform active:scale-95">
+      Aplicar
+    </button>
+</section>
+</div>
+<script>
+  // Simple interactive micro-state for category filters
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.filter-chip').forEach(c => {
+        c.classList.remove('bg-primary-container', 'text-on-primary', 'active');
+        c.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      });
+      this.classList.add('bg-primary-container', 'text-on-primary', 'active');
+      this.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+    });
+  });
+
+  // Organization filter chips toggle
+  document.querySelectorAll('.org-chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.org-chip').forEach(c => {
+        c.classList.remove('bg-surface-container', 'text-primary', 'font-bold');
+        c.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+      });
+      this.classList.add('bg-surface-container', 'text-primary', 'font-bold');
+      this.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+    });
+  });
+
+  // Client-side quick filter simulation
+  const searchInput = document.getElementById('athleteSearch');
+  const rosterCards = document.querySelectorAll('#athleteRosterList article');
+
+  searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase().trim();
+    rosterCards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      if (text.includes(term)) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.4)]" data-active-classes="text-primary-container"><div class="flex justify-around items-center h-16 px-gutter-mobile"><a class="flex flex-col items-center justify-center gap-space-xs min-w-[64px] h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm uppercase">Início</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[64px] h-11 transition-colors text-primary-container" data-path="atletas" href="#"><span class="material-symbols-outlined text-[22px]">sports_martial_arts</span><span class="font-label-sm text-label-sm uppercase">Atletas</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[64px] h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="perfil-atleta" href="#"><span class="material-symbols-outlined text-[22px]">military_tech</span><span class="font-label-sm text-label-sm uppercase">Destaque</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[64px] h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="contato" href="#"><span class="material-symbols-outlined text-[22px]">handshake</span><span class="font-label-sm text-label-sm uppercase">Contato</span></a></div></nav></body></html>
