@@ -14,6 +14,7 @@ import {
   Compass,
 } from "lucide-react";
 import { Athlete3DCard } from "@/components/athlete-3d-card";
+import { SquadLineup } from "@/components/squad-lineup";
 import { ATHLETES } from "@/lib/data/athletes";
 
 export default function HomePage() {
@@ -135,6 +136,9 @@ export default function HomePage() {
           </span>
         </div>
       </div>
+
+      {/* 2.5. KOZMO SQUAD LINEUP (FIFA ULTIMATE TEAM FORMATION STYLE) */}
+      <SquadLineup athletes={ATHLETES} />
 
       {/* 3. INTERACTIVE ATHLETE SPOTLIGHT (MULTI-ATHLETE SWITCHER) */}
       <section

@@ -37,6 +37,14 @@ export const ATHLETES: Athlete[] = [
     },
     imageKimono: "/assets/eduardo_carvalho.png",
     imageBw: "/assets/eduardo_carvalho_bw.png",
+    activeCamp: {
+      targetTournament: "Mundial de Jiu-Jitsu IBJJF 2026",
+      tournamentDate: "Junho 2026",
+      location: "Long Beach, Califórnia (EUA)",
+      fundingGoal: 18000,
+      fundingRaised: 12500,
+      status: "Captação Aberta",
+    },
     featured: true,
   },
   {
@@ -71,6 +79,14 @@ export const ATHLETES: Athlete[] = [
     },
     imageKimono: "/assets/monique_costa.png",
     imageBw: "/assets/monique_costa.png",
+    activeCamp: {
+      targetTournament: "Pan-Americano de Jiu-Jitsu IBJJF",
+      tournamentDate: "Setembro 2026",
+      location: "Kissimmee, Flórida (EUA)",
+      fundingGoal: 14000,
+      fundingRaised: 8200,
+      status: "Captação Aberta",
+    },
     featured: false,
   },
   {
@@ -105,6 +121,14 @@ export const ATHLETES: Athlete[] = [
     },
     imageKimono: "/assets/yago_carioca.png",
     imageBw: "/assets/yago_carioca.png",
+    activeCamp: {
+      targetTournament: "Campeonato Brasileiro CBJJ 2026",
+      tournamentDate: "Maio 2026",
+      location: "Ginásio José Corrêa, Barueri (SP)",
+      fundingGoal: 7500,
+      fundingRaised: 4800,
+      status: "Captação Aberta",
+    },
     featured: false,
   },
   {
@@ -139,6 +163,14 @@ export const ATHLETES: Athlete[] = [
     imageKimono: "/assets/gustavo_veiga.png",
     imageBw: "/assets/gustavo_veiga.png",
     actionImage: "/assets/gustavo_veiga_action.jpg",
+    activeCamp: {
+      targetTournament: "Curitiba Summer Open CBJJ",
+      tournamentDate: "Abril 2026",
+      location: "Curitiba (PR)",
+      fundingGoal: 4500,
+      fundingRaised: 3100,
+      status: "Captação Aberta",
+    },
     featured: false,
   },
 ];

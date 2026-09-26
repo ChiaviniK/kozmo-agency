@@ -14,6 +14,23 @@ export interface Palmares {
   beltsCount: number;
 }
 
+export interface SponsorshipTier {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+  benefits: string[];
+}
+
+export interface ActiveCamp {
+  targetTournament: string;
+  tournamentDate: string;
+  location: string;
+  fundingGoal: number;
+  fundingRaised: number;
+  status: "Captação Aberta" | "Confirmado";
+}
+
 export interface Athlete {
   id: string;
   slug: string;
@@ -31,5 +48,6 @@ export interface Athlete {
   imageKimono: string;
   imageBw: string;
   actionImage?: string;
+  activeCamp?: ActiveCamp;
   featured?: boolean;
 }

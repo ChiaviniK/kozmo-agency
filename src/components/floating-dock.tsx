@@ -11,6 +11,7 @@ import {
   Send,
   ChevronDown,
   ChevronUp,
+  Sparkles,
 } from "lucide-react";
 
 interface DockItem {
@@ -33,6 +34,12 @@ export function FloatingDock() {
       icon: <Compass className="w-4 h-4" />,
     },
     {
+      id: "squad-lineup",
+      label: "Lineup",
+      href: "/#squad-lineup",
+      icon: <Users className="w-4 h-4" />,
+    },
+    {
       id: "spotlight",
       label: "Atletas 3D",
       href: "/#spotlight",
@@ -40,15 +47,15 @@ export function FloatingDock() {
     },
     {
       id: "roster",
-      label: "Roster Oficial",
+      label: "Roster",
       href: "/roster",
-      icon: <Users className="w-4 h-4" />,
+      icon: <Shield className="w-4 h-4" />,
     },
     {
       id: "agency",
       label: "Filosofia",
       href: "/#agency",
-      icon: <Shield className="w-4 h-4" />,
+      icon: <Sparkles className="w-4 h-4" />,
     },
     {
       id: "contact",
@@ -69,7 +76,7 @@ export function FloatingDock() {
       return;
     }
 
-    const sections = ["hero", "spotlight", "agency", "contact"];
+    const sections = ["hero", "squad-lineup", "spotlight", "agency", "contact"];
     const observerCallback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

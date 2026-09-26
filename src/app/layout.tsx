@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { FloatingDock } from "@/components/floating-dock";
 import { CosmicBackground } from "@/components/cosmic-background";
+import { ScrollToTop } from "@/components/scroll-to-top";
 
 const anton = Anton({
   weight: "400",
@@ -89,6 +90,9 @@ export default function RootLayout({
 
         {/* Floating Navigation Dock (Floating Menu) */}
         <FloatingDock />
+
+        {/* Floating Scroll-to-Top Button */}
+        <ScrollToTop />
 
         {/* Editorial Footer */}
         <Footer />
