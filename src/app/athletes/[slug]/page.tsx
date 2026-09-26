@@ -38,7 +38,11 @@ export default async function AthleteDetailPage({ params }: AthletePageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-brand-black text-white pt-8 pb-28 px-6">
+    <div
+      role="region"
+      aria-label={`Ficha Técnica Oficial e Media Kit de ${athlete.name}`}
+      className="min-h-screen text-white pt-8 pb-32 px-6 relative"
+    >
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Navigation & Breadcrumb */}
         <div className="flex items-center justify-between border-b border-white/[0.08] pb-6">

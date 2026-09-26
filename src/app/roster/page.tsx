@@ -21,7 +21,11 @@ export default function RosterPage() {
   });
 
   return (
-    <div className="min-h-screen bg-brand-black text-white pt-12 pb-24 px-6">
+    <div
+      role="region"
+      aria-label="Catálogo de Atletas Oficiais"
+      className="min-h-screen text-white pt-12 pb-28 px-6"
+    >
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Header */}
         <div className="border-b border-white/[0.08] pb-10">
@@ -34,12 +38,16 @@ export default function RosterPage() {
           <h1 className="font-display text-5xl sm:text-7xl uppercase tracking-tight text-white mb-4">
             ATLETAS OFICIAIS
           </h1>
-          <p className="font-sans text-brand-textSecondary text-base max-w-2xl">
+          <p className="font-sans text-[#A6AAB8] text-base max-w-2xl">
             Representamos competidores que definem o padrão mundial de artes marciais. Campeões mundiais, medalhistas internacionais e atletas das Forças Armadas.
           </p>
 
           {/* Filter Bar */}
-          <div className="flex flex-wrap gap-2.5 pt-8">
+          <div
+            role="group"
+            aria-label="Filtrar atletas por graduação e divisão"
+            className="flex flex-wrap gap-2.5 pt-8"
+          >
             <button
               onClick={() => setFilter("all")}
               className={`px-4 py-2 font-mono text-xs uppercase tracking-wider rounded-lg transition-colors ${

@@ -7,8 +7,8 @@
   --bg-surface: #0f1014;
   --bg-surface-elevated: #16171d;
   --text-primary: #ffffff;
-  --text-secondary: #8e919e;
-  --text-muted: #525462;
+  --text-secondary: #a6aab8; /* Improved contrast for WCAG AA readability */
+  --text-muted: #727686;     /* Improved contrast from previous dark gray */
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-prominent: rgba(255, 255, 255, 0.16);
   --gold-accent: #c5a059;
@@ -35,6 +35,24 @@ body {
   background-color: #08080a;
   color: #ffffff;
   overflow-x: hidden;
+}
+
+/* Accessible focus ring for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--gold-accent) !important;
+  outline-offset: 2px !important;
+}
+
+/* Subtle cosmic twinkle animation */
+@keyframes cosmicTwinkle {
+  0% {
+    opacity: 0.15;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.15);
+  }
 }
 
 /* Subtle editorial film grain overlay */
