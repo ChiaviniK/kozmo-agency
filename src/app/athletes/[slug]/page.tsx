@@ -70,7 +70,17 @@ export default async function AthleteDetailPage({ params }: AthletePageProps) {
                     {athlete.militaryAffiliation}
                   </span>
                 )}
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-brand-gold/15 text-brand-gold border border-brand-gold/30 font-mono text-xs font-bold tracking-wider">
+                <span
+                  className={`inline-flex items-center gap-1.5 px-3 py-1 rounded font-mono text-xs font-bold tracking-wider border backdrop-blur-md ${
+                    athlete.belt.toLowerCase().includes("preta")
+                      ? "bg-black/90 text-brand-gold border-brand-gold/40"
+                      : athlete.belt.toLowerCase().includes("roxa")
+                      ? "bg-[#2A153E]/95 text-[#D8B4FE] border-[#9333EA]/50"
+                      : athlete.belt.toLowerCase().includes("azul")
+                      ? "bg-[#0E233C]/95 text-[#93C5FD] border-[#3B82F6]/50"
+                      : "bg-white/15 text-white border-white/30"
+                  }`}
+                >
                   <Award className="w-3.5 h-3.5" />
                   {athlete.belt}
                 </span>
@@ -228,6 +238,33 @@ export default async function AthleteDetailPage({ params }: AthletePageProps) {
               <p className="font-sans text-sm text-brand-textSecondary leading-relaxed">
                 A trajetória de Eduardo Carvalho é moldada pelos valores do Exército Brasileiro: retidão, coragem, preparo físico exemplar e compromisso absoluto com a vitória. Como atleta militar, ele representa o Brasil nos principais campeonatos desportivos militares e civis ao redor do mundo.
               </p>
+            </div>
+          </div>
+        )}
+
+        {/* Action Combat Image Gallery (e.g. Gustavo Veiga) */}
+        {athlete.actionImage && (
+          <div className="border-t border-white/[0.08] pt-16 space-y-6">
+            <div>
+              <span className="font-mono text-xs uppercase tracking-widest text-brand-gold font-semibold block mb-2">
+                Registro de Combate // Ação no Tatame
+              </span>
+              <h2 className="font-display text-4xl sm:text-5xl uppercase tracking-tight text-white">
+                MOMENTO COMPETITIVO
+              </h2>
+            </div>
+            <div className="relative w-full h-[400px] sm:h-[540px] rounded-2xl overflow-hidden border border-white/[0.1] bg-[#121319]">
+              <Image
+                src={athlete.actionImage}
+                alt={`${athlete.name} em combate`}
+                fill
+                className="object-cover object-center filter contrast-110 hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between font-mono text-xs text-white/90">
+                <span>Disputa Oficial // Guarda & Transição Técnica</span>
+                <span className="text-brand-gold font-semibold">Kozmo High Performance</span>
+              </div>
             </div>
           </div>
         )}

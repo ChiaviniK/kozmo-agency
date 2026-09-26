@@ -11,7 +11,10 @@ export default function RosterPage() {
 
   const filteredAthletes = ATHLETES.filter((athlete) => {
     if (filter === "all") return true;
-    if (filter === "black-belt") return athlete.belt.includes("Preta");
+    if (filter === "black-belt") return athlete.belt.toLowerCase().includes("preta");
+    if (filter === "purple-belt") return athlete.belt.toLowerCase().includes("roxa");
+    if (filter === "blue-belt") return athlete.belt.toLowerCase().includes("azul");
+    if (filter === "white-belt") return athlete.belt.toLowerCase().includes("branca");
     if (filter === "military") return Boolean(athlete.militaryAffiliation);
     if (filter === "no-gi") return athlete.discipline === "BJJ No-Gi" || athlete.discipline === "Both";
     return true;
@@ -45,7 +48,7 @@ export default function RosterPage() {
                   : "bg-brand-surface text-brand-textSecondary hover:text-white border border-white/[0.08]"
               }`}
             >
-              Todos os Atletas ({ATHLETES.length})
+              Todos ({ATHLETES.length})
             </button>
             <button
               onClick={() => setFilter("military")}
@@ -55,7 +58,7 @@ export default function RosterPage() {
                   : "bg-brand-surface text-brand-textSecondary hover:text-white border border-white/[0.08]"
               }`}
             >
-              Exército & Militares 🇧🇷
+              Exército 🇧🇷
             </button>
             <button
               onClick={() => setFilter("black-belt")}
@@ -68,14 +71,34 @@ export default function RosterPage() {
               Faixa Preta
             </button>
             <button
-              onClick={() => setFilter("no-gi")}
+              onClick={() => setFilter("purple-belt")}
               className={`px-4 py-2 font-mono text-xs uppercase tracking-wider rounded-lg transition-colors ${
-                filter === "no-gi"
-                  ? "bg-brand-gold text-brand-black font-bold"
+                filter === "purple-belt"
+                  ? "bg-[#7E22CE] text-white font-bold border border-[#A855F7]"
                   : "bg-brand-surface text-brand-textSecondary hover:text-white border border-white/[0.08]"
               }`}
             >
-              No-Gi / Grappling
+              Faixa Roxa
+            </button>
+            <button
+              onClick={() => setFilter("blue-belt")}
+              className={`px-4 py-2 font-mono text-xs uppercase tracking-wider rounded-lg transition-colors ${
+                filter === "blue-belt"
+                  ? "bg-[#1D4ED8] text-white font-bold border border-[#3B82F6]"
+                  : "bg-brand-surface text-brand-textSecondary hover:text-white border border-white/[0.08]"
+              }`}
+            >
+              Faixa Azul
+            </button>
+            <button
+              onClick={() => setFilter("white-belt")}
+              className={`px-4 py-2 font-mono text-xs uppercase tracking-wider rounded-lg transition-colors ${
+                filter === "white-belt"
+                  ? "bg-white text-brand-black font-bold border border-white"
+                  : "bg-brand-surface text-brand-textSecondary hover:text-white border border-white/[0.08]"
+              }`}
+            >
+              Faixa Branca
             </button>
           </div>
         </div>
@@ -105,8 +128,18 @@ export default function RosterPage() {
                       {athlete.militaryAffiliation}
                     </span>
                   )}
-                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-black/80 text-brand-gold font-mono text-[10px] font-bold tracking-wider">
-                    <Award className="w-3 h-3 text-brand-gold" />
+                  <span
+                    className={`inline-flex items-center gap-1 px-2.5 py-1 rounded font-mono text-[10px] font-bold tracking-wider uppercase border backdrop-blur-md ${
+                      athlete.belt.toLowerCase().includes("preta")
+                        ? "bg-black/90 text-brand-gold border-brand-gold/40"
+                        : athlete.belt.toLowerCase().includes("roxa")
+                        ? "bg-[#2A153E]/95 text-[#D8B4FE] border-[#9333EA]/50"
+                        : athlete.belt.toLowerCase().includes("azul")
+                        ? "bg-[#0E233C]/95 text-[#93C5FD] border-[#3B82F6]/50"
+                        : "bg-white/15 text-white border-white/30"
+                    }`}
+                  >
+                    <Award className="w-3 h-3 shrink-0" />
                     {athlete.belt}
                   </span>
                 </div>

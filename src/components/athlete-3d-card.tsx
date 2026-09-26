@@ -88,7 +88,7 @@ export function Athlete3DCard({ athlete }: Athlete3DCardProps) {
             </span>
           </div>
           <span className="font-mono text-[10px] text-brand-textMuted tracking-widest">
-            #KZ-BJJ-93
+            #KZ-{athlete.slug.replace(/-/g, "").slice(0, 6).toUpperCase()}
           </span>
         </div>
 
@@ -114,19 +114,35 @@ export function Athlete3DCard({ athlete }: Athlete3DCardProps) {
                 {athlete.militaryAffiliation}
               </span>
             )}
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md border border-white/10 text-brand-gold font-mono text-[10px] font-bold tracking-wider uppercase">
-              <Award className="w-3 h-3 text-brand-gold" />
+            <span
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded backdrop-blur-md border font-mono text-[10px] font-bold tracking-wider uppercase ${
+                athlete.belt.toLowerCase().includes("preta")
+                  ? "bg-black/90 text-brand-gold border-brand-gold/40"
+                  : athlete.belt.toLowerCase().includes("roxa")
+                  ? "bg-[#2A153E]/95 text-[#D8B4FE] border-[#9333EA]/50"
+                  : athlete.belt.toLowerCase().includes("azul")
+                  ? "bg-[#0E233C]/95 text-[#93C5FD] border-[#3B82F6]/50"
+                  : "bg-white/15 text-white border-white/30"
+              }`}
+            >
+              <Award className="w-3 h-3 shrink-0" />
               {athlete.belt}
             </span>
           </div>
 
           {/* Quick Palmarès Badges Bottom Right of Image */}
           <div className="absolute bottom-3 right-3 z-20 flex items-center gap-1.5">
-            <span className="px-2 py-0.5 rounded bg-brand-gold text-brand-black font-mono text-[10px] font-bold tracking-wider">
-              2x MUNDIAL
-            </span>
+            {athlete.palmares.worldTitles > 0 ? (
+              <span className="px-2 py-0.5 rounded bg-brand-gold text-brand-black font-mono text-[10px] font-bold tracking-wider">
+                {athlete.palmares.worldTitles}x MUNDIAL
+              </span>
+            ) : athlete.nickname ? (
+              <span className="px-2 py-0.5 rounded bg-white/15 backdrop-blur-md text-white font-mono text-[10px] font-bold tracking-wider">
+                &ldquo;{athlete.nickname}&rdquo;
+              </span>
+            ) : null}
             <span className="px-2 py-0.5 rounded bg-white/10 backdrop-blur-md text-white font-mono text-[10px] font-semibold tracking-wider">
-              3 CINTURÕES
+              {athlete.medals.gold} OUROS
             </span>
           </div>
         </div>

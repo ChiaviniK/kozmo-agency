@@ -355,6 +355,99 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 4.5. ROSTER PREVIEW SHOWCASE */}
+      <section className="py-24 px-6 border-b border-white/[0.08] bg-[#0A0B0E]">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+              <span className="font-mono text-xs uppercase tracking-widest text-brand-gold font-semibold block mb-2">
+                Roster Oficial Kozmo // Todas as Graduações
+              </span>
+              <h2 className="font-display text-4xl sm:text-6xl uppercase tracking-tight text-white">
+                EQUIPE DE ALTO RENDIMENTO
+              </h2>
+            </div>
+            <Link
+              href="/roster"
+              className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-brand-gold hover:text-white transition-colors"
+            >
+              <span>Ver Todos os Atletas</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {ATHLETES.map((athlete) => (
+              <Link
+                key={athlete.id}
+                href={`/athletes/${athlete.slug}`}
+                className="group rounded-2xl bg-brand-surface border border-white/[0.08] overflow-hidden hover:border-brand-gold/50 transition-all duration-300 flex flex-col"
+              >
+                <div className="relative h-64 w-full bg-[#14151C] overflow-hidden">
+                  <Image
+                    src={athlete.imageBw}
+                    alt={athlete.name}
+                    fill
+                    className="object-cover object-top filter grayscale group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent" />
+
+                  <div className="absolute top-3 left-3 flex flex-col gap-1">
+                    {athlete.militaryAffiliation && (
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#4A5538]/90 text-white font-mono text-[9px] font-semibold">
+                        <Shield className="w-2.5 h-2.5 text-[#E8D49E]" />
+                        Exército 🇧🇷
+                      </span>
+                    )}
+                    <span
+                      className={`inline-flex items-center gap-1 px-2 py-0.5 rounded font-mono text-[9px] font-bold tracking-wider uppercase border backdrop-blur-md ${
+                        athlete.belt.toLowerCase().includes("preta")
+                          ? "bg-black/90 text-brand-gold border-brand-gold/40"
+                          : athlete.belt.toLowerCase().includes("roxa")
+                          ? "bg-[#2A153E]/95 text-[#D8B4FE] border-[#9333EA]/50"
+                          : athlete.belt.toLowerCase().includes("azul")
+                          ? "bg-[#0E233C]/95 text-[#93C5FD] border-[#3B82F6]/50"
+                          : "bg-white/15 text-white border-white/30"
+                      }`}
+                    >
+                      <Award className="w-2.5 h-2.5 shrink-0" />
+                      {athlete.belt.split("(")[0].trim()}
+                    </span>
+                  </div>
+
+                  <div className="absolute bottom-3 right-3">
+                    <span className="px-2 py-0.5 rounded bg-brand-gold text-brand-black font-mono text-[10px] font-bold">
+                      {athlete.medals.total} MEDALHAS
+                    </span>
+                  </div>
+                </div>
+
+                <div className="p-4 space-y-2 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-editorial text-lg font-bold text-white group-hover:text-brand-gold transition-colors">
+                      {athlete.name}
+                    </h3>
+                    {athlete.nickname && (
+                      <p className="font-mono text-xs text-brand-gold">
+                        &ldquo;{athlete.nickname}&rdquo;
+                      </p>
+                    )}
+                    <p className="font-mono text-[11px] text-brand-textMuted uppercase mt-1">
+                      {athlete.category}
+                    </p>
+                  </div>
+
+                  <div className="pt-3 border-t border-white/[0.06] flex items-center justify-between text-xs font-mono text-brand-textSecondary group-hover:text-white">
+                    <span>Acessar Ficha</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-brand-gold transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 5. CONTACT / PARTNERSHIP FORM */}
       <section id="contact" className="py-24 px-6 bg-[#0B0C10] relative">
         <div className="max-w-4xl mx-auto rounded-3xl border border-white/[0.1] bg-[#101117] p-8 sm:p-14 relative overflow-hidden">
@@ -366,7 +459,7 @@ export default function HomePage() {
               CONECTE SUA MARCA AOS CAMPEÕES.
             </h2>
             <p className="font-sans text-sm text-brand-textSecondary max-w-xl">
-              Seja para patrocinar Eduardo Carvalho, contratar seminários técnicos ou solicitar representação de carreira na Kozmo Agency.
+              Seja para patrocinar nossos atletas, contratar seminários técnicos ou solicitar representação de carreira na Kozmo Agency.
             </p>
           </div>
 
@@ -402,8 +495,9 @@ export default function HomePage() {
                 </label>
                 <select className="w-full bg-[#181922] border border-white/[0.1] px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors rounded-lg font-sans">
                   <option value="eduardo-carvalho">Eduardo Carvalho (Faixa Preta / Exército 🇧🇷)</option>
-                  <option value="matheus-gabriel">Matheus Gabriel (Faixa Preta / Peso Pena)</option>
-                  <option value="helena-vance">Helena Vance (Faixa Marrom / No-Gi)</option>
+                  <option value="monique-costa">Monique Costa (Faixa Roxa / Feminino)</option>
+                  <option value="yago-carioca">Yago Carioca (Faixa Azul / Alto Rendimento)</option>
+                  <option value="gustavo-veiga">Gustavo Veiga &ldquo;Boiadeiro&rdquo; (Faixa Branca)</option>
                   <option value="all">Múltiplos Atletas / Gestão Global</option>
                 </select>
               </div>

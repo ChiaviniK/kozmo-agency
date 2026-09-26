@@ -30,5 +30,6 @@ export interface Athlete {
   palmares: Palmares;
   imageKimono: string;
   imageBw: string;
+  actionImage?: string;
   featured?: boolean;
 }
