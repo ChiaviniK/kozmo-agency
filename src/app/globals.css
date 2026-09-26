@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #08080a;
+  --bg-surface: #0f1014;
+  --bg-surface-elevated: #16171d;
+  --text-primary: #ffffff;
+  --text-secondary: #8e919e;
+  --text-muted: #525462;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-prominent: rgba(255, 255, 255, 0.16);
+  --gold-accent: #c5a059;
+  --army-accent: #4a5538;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  font-family: var(--font-manrope), sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #08080a;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Subtle editorial film grain overlay */
+.bg-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Luxury 3D tilt perspective wrapper */
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* Editorial custom typography */
+.font-display {
+  font-family: var(--font-anton), sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-editorial {
+  font-family: var(--font-syne), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-technical {
+  font-family: var(--font-space-grotesk), monospace;
+  letter-spacing: -0.01em;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08080a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252833;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
+
+::selection {
+  background-color: #c5a059;
+  color: #08080a;
+}
